@@ -38,10 +38,6 @@ services:
     restart: always
     networks:
       - app-network
-networks:
-  app-network:
-    driver: bridge
-
   mlflow:
     build:
       context: .
@@ -52,3 +48,6 @@ networks:
       - "${PWD}/mlflow:/home/mlflow/"
     networks:
       - app-network
+networks:
+  app-network:
+    driver: bridge
