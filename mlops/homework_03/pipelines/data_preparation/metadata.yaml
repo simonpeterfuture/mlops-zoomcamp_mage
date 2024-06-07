@@ -22,7 +22,8 @@ blocks:
   configuration:
     file_source:
       path: homework_03/transformers/transformer_block.py
-  downstream_blocks: []
+  downstream_blocks:
+  - train_block_
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -35,6 +36,24 @@ blocks:
   upstream_blocks:
   - ingestion_block
   uuid: transformer_block
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: homework_03/transformers/train_block_.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: 'train_block '
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - transformer_block
+  uuid: train_block_
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
